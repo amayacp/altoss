@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>altos</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+</link>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    
+  <style>
+    .footer
+    {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-flow: row wrap;
+        padding:40px;
+        padding-bottom:10px;
+        color: #fff;
+        background-color: #171c21;
+    }
+    .footer > *
+    {
+        flex:1 100%;
+    }
+    .footer-left
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer-left img{
+        width: 35%;
+    }
+    h2{
+        font-weight: 600;
+        font-size:17px;
+        color: #fff;
+    }
+    .footer ul{
+        list-style: none;
+        padding-left: 0;
+       
+    }
+    .footer li{
+        line-height:1.5em;
+        padding: 5px;
+    }
+    .footer a{
+        text-decoration: none;
+    }
+    .footer a:hover{
+        text-decoration: none;
+        color: #e90808;
+    }
+   
+    .footer-right
+    {
+        
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 5px;
+        color: #fff;
+        /* background-color: #340387; */
+    }
+    .footer-right > *
+    {
+        flex:1 60%;
+        margin-right: 1.25em;
+    }
+    .box a{
+        color: #999;
+    }
+    .footer-bottom
+    {
+        text-align: center;
+        color: #999;
+    }
+    .footer-left p{
+        padding-right:10%;
+        color: #FFF;
+    }
+    .socials a{
+        background:#364a62 ;
+        width:40px;
+        height: 40px;
+        border-radius: 100%;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .socials a i{
+        color: #e7f2f4;
+        padding:8px 10px;
+        font-size:20px;
+    }
+    .socials a:hover{
+        background-color: #e90808;
+    }
+    .box a i{
+        color: #e7f2f4;
+        font-size:20px; 
+        padding: 2px;
+    
+    }
+    @media screen and (min-width:600px)
+
+    {
+        .footer-right > *
+        {
+            flex:1;
+        }
+        .footer-left{
+            flex:0.75 0px;
+        }
+        .footer-right
+        {
+            flex:2 0px;
+        }
+    }
+    @media(max-width:600px)
+    {
+        .footer-left
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .footer-left img{
+            margin-top: 10px; 
+        }
+        
+        .footer
+        {
+            padding: 15px;
+        }
+        
+   }
+</style>
+
+  
+    {% block body %} 
+    
+    
+    {% endblock %}
+    <br><br>
+  
+   <!-- <footer class="footer" >
+      <div class="footer-left">
+       
+      <a style=" font-size: 20px;" ><i style="color:red ;" class='fas fa-globe '></i> Sign up to get latest updates</a>
+      </div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <div class="footer-right ">
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input style="width:350px;" type="text" placeholder="Enter Your Email.." name="search" ><button style="background-color:red ;color: white;border: #e7f2f4;" type="submit"> Subcribe </button>
+            
+          </form>
+        </div>
+      </div>
+         <hr>
+      <div class="footer-left">
+       
+          <img src="static/images/logo.png" alt="">
+          <h2 class="mt-3 mb-3">ALTOS Technologies</h2>
+
+          <hr>
+        <p>ALTOS Technologies</p> 
+          <div class="socials mt-4">
+              <a href="https://www.facebook.com/ALTOS-Technologies-100285829488811/about/?ref=page_internal"><i class='bx bxl-facebook'></i></a>
+              <a href="https://www.instagram.com/altos_technologies/"><i class='bx bxl-instagram'></i></a>
+              <a href="https://wa.me/+919746632202"><i class='bx bxl-whatsapp'></i></a>
+              <a href="#"><i class='bx bxl-linkedin'></i></a>
+          </div>
+      </div>
+      <ul class="footer-right">
+          <li>
+            
+              <h2>Our Services</h2>
+              
+              <ul class="box">
+                  <li><a href="#"><i class='bx bx-chevron-right'></i>Software</a></li>
+                  <li><a href="#"><i class='bx bx-chevron-right'></i>3D Modelling</a></li>
+                  <li><a href="#"><i class='bx bx-chevron-right'></i>Mobile Appilication</a></li>
+                  <li><a href="#"><i class='bx bx-chevron-right'></i>Game Development</a></li>
+                  <li><a href="#"><i class='bx bx-chevron-right'></i>Web Development</a></li>
+              </ul>
+          </li>
+          <li class="features">
+           
+              <h2>Quick Links</h2>
+              <ul class="box">
+                  <li><a href="/#home"><i class='bx bx-chevron-right'></i>Home</a></li>
+                  <li><a href="/load_about#counts"><i class='bx bx-chevron-right'></i>About Us</a></li>
+                  <li><a href="/training_load"><i class='bx bx-chevron-right'></i>Training</a></li>
+              </ul>
+          </li>
+          <li>
+           
+              <h2>Contact Us</h2>
+              <ul class="box">
+                  <li><a href="#"><i style="margin-left: -10px ;" class='bx bx-map '></i>1st Floor,Carnival Infopark Phase 1, <br>  Kakkand Eranakulam, Kerala, India 682042</a></li>
+                  <li><a href="#"><i class='bx bx-envelope ' ></i> info@altostechnologies.in</a></li>
+                  <li><a href="#"><i class='bx bx-phone '></i> +919746632202</a></li>
+                  
+              </ul>
+          </li>
+      </ul>
+      <hr>
+      <div class="footer-bottom">
+          <p>Copyright@2020. All rights Reserved <a href="https://altostechnologies.in/" style="color: #fff;  text-decoration: none;">ALTOS Technologies</a></p>
+      </div>
+      
+      
+  </footer>--->
+
+  <footer class="footer" >
+    <div class="footer-left">
+       
+        <a style=" font-size: 20px;" ><i style="color:red ;" class='fas fa-globe '></i> Sign up to get latest updates</a>
+        </div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <div class="footer-right ">
+          <div class="search-container">
+            <form action="/action_page.php">
+              <input style="height: 35px;
+              width: 317px;
+              left: 590px;
+              top: 3681px;
+              border-radius: 4px;
+              " type="text" placeholder="Enter Your Email.." name="search" ><button style="height: 35px;
+width: 143px;
+left: 943px;
+top: 3692px;
+border-radius: 2px;background: #FF3C00;
+
+" type="submit"> Subcribe </button>
+              
+            </form>
+          </div>
+        </div>
+        <hr style="height: 2px ; background-color:#999">
+    <div class="footer-left">
+        <img style="height: 97px;
+        width: 292px;
+        left: 69px;
+        top: 3771px;
+        border-radius: 0px;background: #FFF;
+        " src="static/images/logo.png" alt="">
+       
+        <!-- <p>ALTOS Technologies</p> -->
+        <div class="socials mt-4">
+            <a href="https://www.facebook.com/ALTOS-Technologies-100285829488811/about/?ref=page_internal"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/altos_technologies/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://wa.me/+919746632202"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+    </div>
+    <ul class="footer-right">
+        <li>
+            <h2>Our Services</h2>
+            <ul class="box">
+                <li><a href="#"><i class='bx bx-chevron-right'></i>Software</a></li>
+                <li><a href="#"><i class='bx bx-chevron-right'></i>3D Modelling</a></li>
+                <li><a href="#"><i class='bx bx-chevron-right'></i>Mobile Appilication</a></li>
+                <li><a href="#"><i class='bx bx-chevron-right'></i>Game Development</a></li>
+                <li><a href="#"><i class='bx bx-chevron-right'></i>Web Development</a></li>
+            </ul>
+        </li>
+        <li class="features">
+            <h2>Quick Links</h2>
+            <ul class="box">
+                <li><a href="/#home"><i class='bx bx-chevron-right'></i>Home</a></li>
+                <li><a href="/about#counts"><i class='bx bx-chevron-right'></i>About Us</a></li>
+                <li><a href="/training-courses"><i class='bx bx-chevron-right'></i>Training</a></li>
+            </ul>
+        </li>
+        <li>
+            <h2>Contact Us</h2>
+            <ul class="box">
+                <li><a href="#"><i class='bx bx-map '></i> 1st Floor, Carnival Infopark Phase 1, <br>Kakkand Eranakulam, Kerala, India 682042</a></li>
+                <li><a href="#"><i class='bx bx-envelope ' ></i> info@altostechnologies.in</a></li>
+                <li><a href="#"><i class='bx bx-phone '></i> +919746632202</a></li>
+                
+            </ul>
+        </li>
+    </ul>
+    <hr style="height: 2px ; background-color:#999">
+    <div class="footer-bottom">
+        <p>Copyright@2020. All rights Reserved <a href="https://altostechnologies.in/" style="color: #fff;  text-decoration: none;">ALTOS Technologies</a></p>
+    </div>
+</footer>
+  </body>
+</html>

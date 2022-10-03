@@ -1,0 +1,709 @@
+{% extends 'base.html' %}
+                                <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+                                <style></style>
+                                <script type='text/javascript' src=''></script>
+                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+                                <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+{% block body %}
+    {% load static %}
+  
+    <link rel="stylesheet" href="{%  static 'css/s1.css' %}">
+  
+   <style>
+    body{
+        font-family: "poppins";
+        font-style: normal;
+    }
+     .img1
+        {   
+            width:70%;
+            height: 600px;
+            background:url('static/images/about-us.jpg')no-repeat center / cover ;
+            border-radius: 8px;
+          
+        }
+        .img2
+        {   
+
+            width:500px;
+            height: 500px;
+            background:url('static/images/istockphoto-609072850-170667a.jpg')no-repeat center / cover ;
+            border-radius: 8px;
+          
+        }
+        .cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 0;
+}
+.carousel-inner {
+  padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .card img {
+    height: 11em;
+  }
+}
+        
+        </style>
+<nav style="position: absolute;
+width: 100%;
+height: 100px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.12);" class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img src="static/images/logo.png" style="position:absolute;width: 292px;
+    height: 97px;left: 67px;top: -6px;"  ></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a style="position: absolute;
+   
+      height:24px;
+      left: 481px;
+      top: 42px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: blue;" class="nav-link active"  href="{% url 'home' %}"> HOME</a>
+      <a style="position: absolute;
+
+      height:24px;
+      left: 616px;
+      top: 42px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;" class="nav-link" href="{% url 'home' %}"> ABOUT US</a>
+      <a style="position: absolute;
+
+      height:24px;
+      left: 780px;
+      top: 42px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;" class="nav-link" href="{% url 'training' %}">TRAINING </a>
+      <a style="position: absolute;
+
+      height:24px;
+      left: 934px;
+      top: 42px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;"  class="nav-link" href="{% url 'contact' %}"> CONTACT</a>
+    </div>
+  </div>
+</nav>
+
+<br><br><br>
+<br><br>
+<br>
+
+{% include 'messages.html' %}
+
+<div>
+  <div class="card bg-dark ">
+    <img class="card-img" src="static/images/w.jpg" alt="Card image" style="width:100%;height:340px;" >
+    <div class="card-img-overlay">
+      <div class="row">
+        <div class="col">
+          <hr style="width: 250px;height:3px ;background-color: #1dcfd1;border-color:#1dcfd1;">
+      <h5 style= "font-family: poppins;
+      font-style: normal;" class="card-title">SECURE & IT SOLUTIONS</h5>
+      <h3  style="text-transform:none ;font-family: poppins;
+      font-style: normal;font-size: 45px;"><b>Excellent IT Solutions</b><br><b>ForYour</b><span  style="color:rgb(208, 27, 27);">&nbsp;<b>Success</b></span></h3>
+<p style="font-family: poppins;
+font-style: normal;">Lorem ipsum dolor sit amet adipisicing elit.</p>
+<a style="float:left ;background-color: #1E4D69;border-radius: 5px;" href="#" class="btn btn-primary">learn more&nbsp&nbsp<i class="fa fa-arrow-right fa-sm" aria-hidden="true"></i></a>
+
+        </div>
+        <div  class="col">
+          <img src="static/images/slider-single-img2.png" style="width:100%;height:320px;margin-top: 0;" alt="">         </div></div></div>
+    </div><br><br>
+ 
+    <div  class="container">
+  
+      <div class="row">
+        <div  class="col">
+
+          <div style="position: relative;
+          text-align: center;
+          color: white;" class="container"><br><br>
+            <img src="static/images/about-us.jpg" alt="Snow" style="width:400px; height: 500px; ">
+            
+          </div>
+
+    </div>
+         
+      
+
+        <div class="col-md-7"><br>
+          <h5 class="line" style="color: #FF3C00;
+          ;font-family: poppins">//About Company</h5>
+          <h3  style="text-transform:none ;font-family: poppins"><b>We Deal With The Aspects Of<br>professional <span  style="color:
+            #FF3C00;">&nbsp; IT Solutions</span><br><hr style="width:30%;color:
+#FF3C00;background-color: #FF3C00;height: 3px;border-color: #FF3C00;"> </h3></b>
+          <div class="content" style="background-color:#fff ;font-family: poppins">
+            <p style="font-size:15px;font-family: poppins;color: #0000008C;
+            "><b >ALTOS</b> Technologies is a leading Software and Web development company based in Kochi, Kerala. 
+                 With the latest technology and framework, we continuously strive to improve ideas as a 
+                 team of young, innovative thinkers. We are located in the IT hub of Kerala, Infopark Kochi, 
+                 and have been helping businesses and individuals realize their full potential for years 
+                 with our expertise in Software, Web development, Mobile application development, 
+                 3D modelling, Game development etc. We are also providing On-the-Job training to 
+                 students with the knowledge we have gained over the past few years in order for them to 
+                 build a great career under professionals of multinational companies. </p>
+                 
+                 <img src="static/images/c.png" width="90" alt="">   
+                         <p style="font-size:15px;margin-top: -80px;margin-left:100px ;font-family: poppins;"><b >User Experience</b><br><a style="font-family: poppins;color: #0000008C;">Skilled professional are always ready to provide reliable services to our clients!</a> </p>
+                        
+
+ <br><br>
+                  
+                 <img src="static/images/24.png" width="90" alt="">   
+                         <p style="font-size:15px;margin-top: -80px;margin-left:100px ;font-family: poppins;"><b >Quick Support</b><br><a style="font-family: poppins;color: #0000008C;">Branches are situated in major metro cities and overseas always open for you!</a> </p>
+                        
+      </div>
+    </div></div>
+<br><br><br>
+
+
+ 
+
+    <div style="background-color:lavender;" class="box" >
+
+</div></div><br><br>
+
+ <style type="text/css">
+
+  .post-slide6{margin:0 10px;border-left:8px solid white;border-bottom:8px solid white;box-shadow:0 1px 2px rgba(43,59,93,.3);margin-bottom:2em}
+  .post-slide6 .post-img{position:relative;overflow:hidden}
+  .post-slide6 .post-img:before{content:"";width:100%;height:100%;position:absolute;top:0;left:0;background:rgba(0,0,0,0);transition:all .4s linear 0s}
+  .post-slide6:hover .post-img:before{background:rgba(0,0,0,.6)}
+  .post-slide6 .post-img img{width:100%;height:auto}
+  .post-slide6 .post-info{width:75%;position:absolute;bottom:-100%;left:12.5%;background:white;text-align:center;line-height:26px;padding:15px;transition:bottom .4s ease-in-out 0s}
+  .post-slide6:hover .post-info{bottom:0}
+  .post-slide6 .category{padding:0;margin:0;list-style:none}
+  .post-slide6 .category li,.post-slide6 .post-date{display:inline-block;font-size:16px;color:#fff;text-transform:capitalize}
+  .post-slide6 .category li:after{content:" /"}
+  .post-slide6 .category li:last-child:after{content:""}
+  .post-slide6 .category li a{color:#fff;transition:all .4s linear}
+  .post-slide6 .category li a:hover{color:#555;text-decoration:none}
+  .post-slide6 .post-review{padding:35px 20px 25px;background:#fff;position:relative}
+  .post-slide6 .icons{width:90px;height:90px;border:4px solid #fff;border-radius:50%;position:absolute;top:-45px;right:10px;overflow:hidden}
+  .post-slide6 .icons img{width:100%;height:auto}
+  .post-slide6 .post-title{margin:0 0 25px 0}
+  .post-slide6 .post-title a{font-size:16px;font-weight:700;letter-spacing:2px;color:#1dcfd1;display:inline-block;text-transform:uppercase;transition:all .3s linear 0s}
+  .post-slide6 .post-title a:hover{text-decoration:none;color:#555}
+  .post-slide6 .post-description{color:#555;font-size:15px;line-height:26px;margin-bottom:20px}
+  .post-slide6 .read{font-size:13px;color:#555;display:block;text-align:right;text-transform:uppercase}
+  .post-slide6 .read:hover{text-decoration:none;color:#1dcfd1}
+  
+  
+  </style>
+  
+  <body>
+    <div style="background-color: #F4F7FC;
+    " class="box" >
+  <div class="container">
+    <div class="title"><br>
+      <h5 class="line"  style="color: #FF3C00;
+      ;font-family: poppins;font-size: 20px;">&nbsp&nbsp//Our Technologies</h5>
+    </div>
+    <h3  style="text-transform:none ;font-family: poppins;font-size: 32px;"><b>&nbsp&nbspWhat We Provide</b> </h3><br>
+    
+      <div class="row">
+          <div class="col-md-12">
+              <div id="news-slider6" class="owl-carousel">
+                  <div class="post-slide6">
+                      <div class="post-img">
+                          <img class="pic-1" src="static/images/3d.png">
+                          
+                      </div>
+                      <div class="post-review">
+                          <span class="icons">
+                              <img style="background-color:white ;" class="pic-1" src="static/images/60125-200.png">
+                          </span>
+                          <h5 class="card-title"><b>3D</b>(3 Dimenzions)</h5>
+                          <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.</p>
+                          <a style="width:100%;text-align:left;background-image:linear-gradient(to right,rgb(1, 43, 59) 70% ,black)" href="#" class="btn btn-primary">READ MORE >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i></a>
+                        </div>
+                  </div>
+   
+                  <div class="post-slide6">
+                      <div class="post-img">
+                          <img class="pic-1" src="static/images/ai.png">
+                          
+                      </div>
+                      <div class="post-review">
+                          <span class="icons">
+                              <img style="background-color:white ;" class="pic-1" src="static/images/1693746.png">
+                          </span>
+                          <h5 class="card-title"><b>AI</b>(Artificial Intelligients)</h5>
+                          <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.</p>
+                          <a style="width:100%;text-align:left;background-image:linear-gradient(to right,rgb(1, 43, 59) 70% ,black)" href="#" class="btn btn-primary">READ MORE >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i></a>
+                        </div>
+                  </div>
+                  
+                  
+                  
+                  <div class="post-slide6">
+                      <div class="post-img">
+                          <img class="pic-1" src="static/images/vr.png">
+                          
+                      </div>
+                      <div class="post-review">
+                          <span class="icons">
+                              <img style="background-color:white ;" class="pic-1" src="static/images/1976428.png">
+                          </span>
+                          <h5 class="card-title"><b>VR</b>(Virtual Reality)</h5>
+                          <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda culpa cumque dicta sint soluta voluptas eius iusto modi reprehenderit sint soluta voluptas.</p>
+                          <a style="width:100%;text-align:left;background-image:linear-gradient(to right,rgb(1, 43, 59) 70% ,black)" href="#" class="btn btn-primary">READ MORE >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i></a>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div></div>
+  <hr>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    
+      $("#news-slider6").owlCarousel({
+          items : 3,
+          itemsDesktop:[1199,3],
+          itemsDesktopSmall:[980,2],
+          itemsMobile : [600,1],
+          pagination:false,
+          navigationText:false
+      });
+    });
+  </script>
+  
+  
+  </body>
+
+
+  
+      <div class="row">
+        <div style="height: 620px;background:linear-gradient(to right, #029D97 0%,#029D97 50%,#1E4D69 50%,#1E4D69 100%)" class="col">
+
+          <div style="position: relative;
+          text-align: center;
+          color: white;" class="container"><br><br>
+            <img src="static/images/istockphoto-609072850-170667a.jpg" alt="Snow" style="width:430px; height: 500px; ">
+            <div style="   position: absolute;
+            bottom: 50px;
+            right: 57px;
+            
+            background-color: #029D97;
+            text-shadow: 0 0 3px black,0 0 5px black ;" 
+            class="bottom-right"><b>&nbsp&nbsp20+&nbsp years&nbsp of&nbsp&nbsp</b></div>
+
+            <div style="   position: absolute;
+                bottom: 8px;
+                right: 57px;
+               ;
+                text-shadow: 0 0 3px black,0 0 5px black ;
+                background-color: #029D97;" class="bottom-right"><b>&nbsp&nbspExperience&nbsp&nbsp&nbsp</b></div>
+           
+          </div></div>
+         
+   
+
+        <div style="height: 620px;background-color:#1E4D69 ;" class="col-md-7"><br><br>
+          <h5 class="line" style="color:rgb(201, 52, 15);">//Why Choose Us</h5>
+          <h3  style="text-transform:none ;color: white;"><b>Some Of Reason For Choose<br>Our <span  style="color:rgb(208, 27, 27);">&nbsp; IT Solutions</span><br>______ </h3></b>
+          <p class="m-0"style="font-size:15px; color: white;">We provide immigration service in all over country and universities.
+          </p><br>  
+          <img src="static/images/icons8-computer-64.png" width="90" alt="">   
+          <p style="font-size:15px;margin-top: -80px;margin-left:100px ;color: white;"><b >Product Designs</b><br>Skilled professional are always ready to provide reliable services to our clients! </p><br>  <br>  
+  <img src="static/images/icons8-analysis-48.png" width="90" alt=""> 
+          <p style="font-size:15px;margin-top: -80px;margin-left:100px ;color: white;"><b >Big Data & Analytics</b><br>Branches are situated in major metro cities and overseas always open for you! </p><br>  <br>  
+          <img src="static/images/icons8-lock-database-32.png" width="90" alt="">   
+          <p style="font-size:15px;margin-top: -80px;margin-left:100px ;color: white;"><b >Maintain App Data</b><br>Branches are situated in major metro cities and overseas always open for you! </p><br>  <br>  
+                
+      </div>
+    </div>
+  </div><br><br>
+
+
+
+  <div class="card bg-dark text-white">
+    <img class="card-img" src="static/images/down.png" alt="Card image" style="opacity:20%;">
+    <div class="card-img-overlay">
+      <div class="row">
+        <div class="col"  style="width:40%;"><br>
+      <h5 class="card-title">//OUR CASE STUDY</h5>
+      <h3>Introduce Our Ongoing Projects</h3>
+        </div>
+        <div class="col-md-8"  style="width:60%;">
+      <p class="card-text"><br>Software development outsourcing is just a tool to achieve business goals.But there is no way to get worthwhile results without cooperation our service and trust between a client company</p>
+      </div>
+
+  
+ <style>
+  #team .container{
+      height: 550px;
+      width: 100%;
+
+  }
+  
+  #team .container img{
+      height: 80%;
+      width:100%;
+      border-radius: 10px;
+  }
+  #team .container h5
+  {
+      color: #fff;
+      font-size: 2rem;
+  }
+  @media(max-width:921px)
+  {
+      #team .container{
+          height: 370px;
+
+      }
+      #team .container img{
+          height: 80%;
+          width:100%;
+          border-radius: 10px;
+          margin-bottom: 4px;
+      }
+  }
+  #team .container .btn
+  {
+      position: absolute;
+      top:20%;
+      left:93%;
+      transform: translate(-50%, -50%);
+      -ms-transform:translate(-50%, -50%); 
+      border-radius: 5px;
+      color: #fff;
+      
+      font-weight: 500;
+      background-color: rgb(53, 200, 53);
+     
+  }
+  #team .container .btn span{
+      text-transform: capitalize;
+  }
+  @media(max-width:932px)
+  {
+      #team .container .btn
+      {
+          position: absolute;
+          top:88%;
+          left:50%;
+          transform: translate(-50%, -50%);
+          -ms-transform:translate(-50%, -50%); 
+          
+         
+          font-size: 14px;
+          border-radius: 2px;
+          margin-bottom: 2px;
+          
+
+      }  
+  }
+</style>
+
+
+<style>
+  .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .mySwiper
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 400px;
+      height: 400px;
+     
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+    .swiper-slide .pbox{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-slide .pbox h5{
+      font-size: 20px;
+      margin: 2vh;
+      padding: 10px;
+    }
+    .swiper-slide .pbox .btn{
+      background-color: rgb(53, 200, 53);
+      color: #fff;
+     
+    }
+
+    @media screen and (max-width:932px){
+      .swiper-slide {
+          width: 350px;
+          height: 350px;
+      }
+      
+    }
+  </style>
+
+  <h1 class="text-center mt-3 mb-2"></h1>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+    
+      <div class="swiper-slide">
+      
+        <img src="static/images/crm.png" alt=""/>
+      
+        <div class="pbox">
+          <h5 style="color: black ;" class="">CRM</h5>
+          <button style="background-color: #1E4D69;" class="btn" data-bs-toggle="modal" data-bs-target="#enquerymodal"><span>ENQUIRY</span></button> 
+        </div>
+      </div>
+    
+      <div class="swiper-slide">
+      
+        <img src="static/images/erp.png" alt=""/>
+      
+        <div class="pbox">
+          <h5 style="color: black ;"  class="">ERP</h5>
+          <button style="background-color:#1E4D69 ;" class="btn" data-bs-toggle="modal" data-bs-target="#enquerymodal"><span>ENQUIRY</span></button> 
+        </div>
+      </div>
+    
+      <div class="swiper-slide">
+      
+        <img src="static/images/hrms.png" alt=""/>
+      
+        <div class="pbox">
+          <h5 style="color: black ;"  class="">HRMS</h5>
+          <button style="background-color:#1E4D69 ;" class="btn" data-bs-toggle="modal" data-bs-target="#enquerymodal"><span>ENQUIRY</span></button> 
+        </div>
+      </div>
+    
+      <div class="swiper-slide">
+      
+        <img src="static/images/account.png" alt=""/>
+      
+        <div class="pbox">
+          <h5 style="color: black ;"  class="">ACCOUNTING</h5>
+          <button style="background-color:#1E4D69 ;" class="btn" data-bs-toggle="modal" data-bs-target="#enquerymodal"><span>ENQUIRY</span></button> 
+        </div>
+      </div>
+    
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+
+      <style>
+
+        #blog .clientslogo
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+        }
+        #blog .clientslogo .imgbox
+        {
+            flex: 1 1 calc(25% - 10px);
+        }
+        #blog .clientslogo img{
+            width:32vh;
+            height:32vh;
+            
+            transition: transform 1s ease-in-out;
+        }
+        #blog .clientslogo img:hover{
+            transform: scale(1.1);
+        }
+        @media screen and (max-width:923px)
+        {
+            #blog .clientslogo .imgbox
+           
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1 1 calc(33% - 5px);
+            }
+         
+        }
+       </style>
+       <div>
+        <section id="blog" class="clients_logo mt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="intro">
+                           
+                            <h3 class="mt-2 p-3" style="text-transform:none ;text-align: center;;color: black;"><b>CHECK OUT OUR  <span  style="color:rgb(208, 27, 27)"> CLIENT<br>______ </span</h3></b>
+                               </div>
+                    </div>
+                </div>
+                <div class="clientslogo">
+                
+                    <div class="imgbox" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"data-aos-delay="1000">
+                       
+                        <img src="static/images/c1.png">
+                    
+                    </div>
+                    
+                
+                    <div class="imgbox" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"data-aos-delay="1000">
+                       
+                        <img src="static/images/c2.png">
+                    
+                    </div>
+                    
+                
+                    <div class="imgbox" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"data-aos-delay="1000">
+                       
+                        <img src="static/images/c4.png">
+                    
+                    </div>
+                    
+                
+                    <div class="imgbox" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"data-aos-delay="1000">
+                       
+                        <img src="static/images/c5.png">
+                    
+                    </div>
+                    
+                
+                    
+                    
+                </div>
+            </div>
+            
+        </section>  </div> <br>
+    
+      
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init();
+    </script>
+    
+      <div class="modal fade" id="enquerymodal"  aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                
+                <div class="modal-body p-0">
+                    
+                    <div class="container-fluid">
+                        <div class="close_button text-end">
+                            <button type="button" class="btn-close p-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                      
+                        <div class="row gy-4">
+                            
+                            <div class="col-lg-12">
+                              <div class="p-lg-5 col-12 row g-3">
+                                  
+             <form method="POST" action="{% url 'enquerys' %}" enctype="multipart/form-data">
+              {% csrf_token %}
+                                    <div>
+                                        <h1 style="color: black ;text-align: center; " class="mt-3">Project Enquery</h1>
+                                    <!-- <p>Fill the the form and we will get back to you as soon as possible</p> -->
+                                    </div>
+                                  
+
+             
+                                    <div class="col-lg-12">
+                                        <label style="color: black ;" >Full Name</label>
+                                        <input type="text" class="form-control form-control-lg" name="Name">
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <label style="color: black ;">Email address</label>
+                                        <input type="email" class="form-control form-control-lg" name="Email" >
+                                    </div>
+                                    <div class="col-12">
+                                        <label style="color: black ;">Contact</label>
+                                        <input type="number"  class="form-control form-control-lg" name="Phone" >
+                                    </div>
+                                    <div class="col-12">
+                                        <label style="color: black ;">About Which Project</label>
+                                        <textarea type="text" rows="5"class="form-control form-control-lg" name="message"></textarea>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button style="background-color: orange ; " type="submit" class="btn btn-danger">Send</button>
+                                    </div>
+                                </form></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
