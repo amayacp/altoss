@@ -1,0 +1,79 @@
+{% extends 'base2.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/modal.css' %}">
+{% block content %}
+
+
+<style>
+  
+     table, th, td{
+            border: 5px solid ;
+            text-align: center;
+            height: 50%;
+            border-style: double;
+            border-color: #1E4D69;
+            padding: 5px;
+            
+            
+        }
+        th{
+            font-size: 16px;
+            background-color: #1E4D69;
+        }
+        td{
+            font-size: 18px;
+        }
+    .title{
+        margin: auto;
+    }
+    .de{
+        color:  #19B3D3;
+    }
+    .de:hover{
+    color: rgb(0, 255, 21);
+
+
+    
+  }
+
+</style>
+
+<div class="container-fluid" style="margin-left:2%;width: 90%; ">
+   
+<h1 class="text-center" style="color:  #19B3D3 ;text-align: center;"> Show Registrations</h1>
+ <table style=" margin:auto;margin-top:30px;background-color: #ccc;color:white;border: 5px;border-style: double;padding: 10px;border-color: #1E4D69;;width: 100%;" width='50% '  >
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Message</th>
+        <th>date</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for p in user %}
+    <tr>
+        
+        <td style="color:#1E4D69 ;">{{ p.Name }}</td>
+        <td style="color:#1E4D69 ;">{{ p.Email }}</td>
+        <td style="color:#1E4D69 ;">{{ p.Phone }}</td>
+        <td style="color:#1E4D69 ;">{{ p.message }}</td>
+        <td style="color:#1E4D69 ;">{{ p.date }}</td>
+       
+     
+        <td> 
+            <!--<button class="btn btn-primary"><a class=" de" href="#editCourseModal-{{forloop.counter}}" class="edit" data-toggle="modal">Edit</a></button>-->
+            <a style="background-color:#19B3D3;border: 2px solid #1E4D69;color: #1E4D69;" rol="button" class="btn btn-outline-dark btn-sm" href="{% url 'delete_reg' p.id %}" class="delete">Delete</a>        </td>
+    </tr>
+   
+    {% endfor %}
+</tbody>
+ </table>
+
+
+</div>
+
+{% endblock content %}

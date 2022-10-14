@@ -1,67 +1,59 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body %}
-<nav style="position: absolute;
-width: 100%;
-height: 100px;
-left: 0px;
-top: 0px;
-
-background: #FFFFFF;
-box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.12);" class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img src="static/images/logo.png" style="position:absolute;width: 292px;
-    height: 97px;left: 67px;top: -6px;"  ></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a style="position: absolute;
-   
-      height:24px;
-      left: 481px;
-      top: 42px;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
- ;" class="nav-link"  href="{% url 'home' %}"> HOME</a>
-      <a style="position: absolute;
-
-      height:24px;
-      left: 616px;
-      top: 42px;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;" class="nav-link" href="{% url 'home' %}"> ABOUT US</a>
-      <a style="position: absolute;
-
-      height:24px;
-      left: 780px;
-      top: 42px;
-      font-weight: 500;
-      font-size: 16px;     
-      line-height: 24px;" class="nav-link  " href="{% url 'training' %}">TRAINING </a>
-      <a style="position: absolute;
-
-      height:24px;
-      left: 934px;
-      top: 42px;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;"  class="nav-link" href="{% url 'contact' %}"> CONTACT</a>
-    </div>
-  </div>
-</nav>
-
-<br><br><br><br>
+<div>
+  <section class="navbar m-0 p-0 container-fluid shadow ">
+    <nav class="navbar navbar-expand-lg navbar-light w-100 py-3">
+      <div class="container ">
+        <a class="navbar-brand " href="#"><img src="static/images/logo.png" width="200px" height="50px" alt=""></a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown2"
+          aria-controls="navbarNavDropdown2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown2">
+          <ul class="navbar-nav ">
+            <li class="nav-item ">
+              <a class="nav-link"  aria-current="page" href="{% url 'home' %}"><b>HOME</b></a>
+            </li>
+  
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link " href="">ABOUT US</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link "  href="{% url 'training' %}">TRAINING</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link "  href="{% url 'contact' %}">CONTACT</a>
+            </li>
+  
+  
+  
+  
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <style>
+      .nav-item a {
+        font-size: 18px;
+      }
+  
+      .nav-link {
+        font-weight: 800;
+      }
+    </style>
+  </section>
 
 <style>
   body{
       font-family: " 'Arial Narrow', Arial, sans-serif";
     }
 </style>
-    
-
+{% include 'messages.html' %}  
+<div>
 <div class="card bg-dark text-white">
   <img style="opacity:30% ;" class="card-img" src="static/images/iStock-914788012.Jpg" width="100%" height="250" alt="Card image">
   <div class="card-img-overlay">
@@ -70,7 +62,7 @@ box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.12);" class="navbar navbar-expand-
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);" class="card-title">COURSE DETAILS</h5>
-  </div></div><br><br>
+  </div></div></div><br><br>
 
 <div class="container">
     <div class="row">
@@ -149,7 +141,7 @@ box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.12);" class="navbar navbar-expand-
                                      <h5 style="text-align: left;color: rgb(1, 43, 59) ;" ><b>Get A Free Registration!</b></h5><br>   
                                      <div  class="container">
                                       
-            {% include 'messages.html' %}
+           
 
             <form method="POST" action="{% url 'reg' %}" enctype="multipart/form-data">
               {% csrf_token %}
@@ -176,7 +168,7 @@ box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.12);" class="navbar navbar-expand-
                                        
                                        <textarea style="height:130PX ;" type="text"  class="form-control form-control-lg" name="message" placeholder="Enter Message" ></textarea>
                                      </div>
-                                     <button class="btn btn-danger" type="submit" style="width:150px;background-color: rgb(1, 43, 59) ;color: white;">Submit</button><br>
+                                     <button class="btn btn-danger" type="submit" style="width:150px;background-color: rgb(1, 43, 59) ;color: white;">Submit</button><br><br>
                                      </div>
                         
                         </div>

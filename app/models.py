@@ -13,13 +13,14 @@ class register(models.Model):
     Name = models.CharField(max_length=255)
     Email = models.EmailField()
     Phone = models.CharField(max_length=12)
-    date = models.CharField(max_length=20)
+    date   = models.CharField(max_length=20)
     message =  models.CharField(max_length=255)
 
 class enquery(models.Model):
     Name = models.CharField(max_length=255)
     Email = models.EmailField()
     Phone = models.CharField(max_length=12)
+    project = models.CharField(max_length=255)
     message =  models.CharField(max_length=255)
 
 class apply(models.Model):
