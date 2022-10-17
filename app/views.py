@@ -82,7 +82,8 @@ def add_user(request):
                 messages.error(request, 'Email already exists!!!!!!')
                 return redirect('contact') 
     else:
-         messages.success(request,'You have registered successfully ')
+        messages.success(request,'Thank you for contacting us.We will try to reach you as soona as possible... ')
+
     
 
     u.save()
@@ -93,7 +94,22 @@ def add_user(request):
 @login_required(login_url='user_login')
 def msg(request):
     msg=userdata.objects.all()
+    
     return render(request,'msg.html',{'u':msg})
+
+def msg_approve(request,pk):
+    leave = userdata.objects.get(id=pk)
+    leave.status = 1
+    leave.save()
+    return redirect('msg')
+
+def msg_reject(request, pk):
+    leave =  userdata.objects.get(id=pk)
+    leave.status = 2
+    leave.save()
+    return redirect('msg')
+
+    
 
 @login_required(login_url='user_login')
 def edit_user(request,pk):
@@ -116,6 +132,8 @@ def delete_user(request,pk):
     u=userdata.objects.get(id=pk)
     u.delete()
     return redirect('msg')  
+
+
     
 def reg(request):
     if request.method=='POST':
@@ -133,7 +151,7 @@ def reg(request):
                 messages.error(request, 'Email already exists!!!!!!')
                 return redirect('course') 
     else:
-         messages.success(request,'Thank you for contacting us.We will try to reach you as soona as possible... ')
+         messages.success(request,'You have registered successfully ')
     
 
     user.save()
@@ -145,6 +163,18 @@ def reg(request):
 def regist(request):
     msg=register.objects.all()
     return render(request,'regist.html',{'user':msg})
+
+def regist_approve(request,pk):
+    leave = register.objects.get(id=pk)
+    leave.status = 1
+    leave.save()
+    return redirect('regist')
+
+def regist_reject(request, pk):
+    leave =  register.objects.get(id=pk)
+    leave.status = 2
+    leave.save()
+    return redirect('regist')
 
 
 @login_required(login_url='user_login')
@@ -180,6 +210,18 @@ def enquerys(request):
 def enquir(request):
     msg=enquery.objects.all()
     return render(request,'enquir.html',{'user':msg})
+
+def enquir_approve(request,pk):
+    leave = enquery.objects.get(id=pk)
+    leave.status = 1
+    leave.save()
+    return redirect('enquir')
+
+def enquir_reject(request, pk):
+    leave =  enquery.objects.get(id=pk)
+    leave.status = 2
+    leave.save()
+    return redirect('enquir')
 
 
 @login_required(login_url='user_login')
@@ -217,6 +259,18 @@ def app(request):
 def appl(request):
     msg=apply.objects.all()
     return render(request,'appl.html',{'user':msg})
+
+def appl_approve(request,pk):
+    leave = apply.objects.get(id=pk)
+    leave.status = 1
+    leave.save()
+    return redirect('appl')
+
+def appl_reject(request, pk):
+    leave =  apply.objects.get(id=pk)
+    leave.status = 2
+    leave.save()
+    return redirect('appl')
 
 
 @login_required(login_url='user_login')

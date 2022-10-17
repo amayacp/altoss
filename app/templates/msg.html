@@ -1,16 +1,17 @@
 {% extends 'base2.html' %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/modal.css' %}">
+
 {% block content %}
 
 
 <style>
   
-     table, th, td{
-            border: 5px solid ;
+  table, th, td{
+    border: 2px solid black ;
             text-align: center;
             height: 50%;
-            border-style: double;
+            
             border-color: #1E4D69;
             padding: 5px;
             
@@ -38,10 +39,13 @@
 
 </style>
 
+    
+</style>
+
 <div class="container-fluid" style="margin-left:2%;width: 90%; ">
    
 <h1 class="text-center" style="color:  #19B3D3 ;text-align: center;"> Show Messages</h1>
- <table style=" margin:auto;margin-top:30px;background-color: #ccc;color:white;border: 5px;border-style: double;padding: 10px;border-color: #1E4D69;;width: 100%;" width='50% '  >
+ <table >
     <thead>
     <tr>
         
@@ -50,26 +54,35 @@
         <th>Phone</th>
         <th>Message</th>
         <th>Action</th>
+        <th>Delete</th>
     </tr>
     </thead>
     <tbody>
     {% for p in u %}
     <tr>
         
-        <td style="color:#1E4D69 ;">{{ p.Name }}</td>
-        <td style="color:#1E4D69 ;">{{ p.Email }}</td>
-        <td style="color:#1E4D69 ;">{{ p.Phone }}</td>
-        <td style="color:#1E4D69 ;">{{ p.massage }}</td>
-     
+        <td >{{ p.Name }}</td>
+        <td >{{ p.Email }}</td>
+        <td >{{ p.Phone }}</td>
+        <td >{{ p.massage }}</td>
+        <td> {% if p.status == 0 %}
+            <button style="background-color:yellow;color:#fff;"><a href="{% url 'msg_approve' p.id %}" class="btn btn-success">Approve</a></button>
+        <button style="background-color:yellow"><a href="{% url 'msg_reject' p.id %}" class="btn btn-danger">Reject</a></button>
+        {% elif p.status == 1 %}
+            <button style="background-color:green ; color:#fff;" class="btn btn-warning" disabled="disabled">Approved</button>
+        {% else %}
+            <button style="background-color:red ; color:#fff;" class="btn btn-danger" disabled="disabled">Rejected</button>
+        {% endif %}</td> 
         <td> 
+            <button style="padding:2px; height:30px;width: 60px;background-color: rgb(62, 219, 62);border-color: rgb(62, 219, 62); "><a  rol="button" class="btn  btn-sm " href="{% url 'delete_user' p.id %}" class="delete"><i style="color:red ;" class="fa-solid fa-trash-can fa-lg"></i></a></button></td>
+
             <!--<button class="btn btn-primary"><a class=" de" href="#editCourseModal-{{forloop.counter}}" class="edit" data-toggle="modal">Edit</a></button>-->
-            <a style="background-color:#19B3D3;border: 2px solid #1E4D69;color: #1E4D69;" rol="button" class="btn btn-outline-dark btn-sm" href="{% url 'delete_user' p.id %}" class="delete">Delete</a>        </td>
     </tr>
    
     {% endfor %}
 </tbody>
  </table>
-
+ 
 
     <!---{% for p in u  %}
         <!-- Edit Modal HTML 
@@ -139,5 +152,21 @@
     {% endfor %}=-->
 
 </div>
-
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      </style>
 {% endblock content %}

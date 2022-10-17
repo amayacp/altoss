@@ -8,6 +8,7 @@ class userdata(models.Model):
     Email = models.EmailField()
     Phone = models.CharField(max_length=12)
     massage =  models.CharField(max_length=255)
+    status = models.IntegerField(default=0)
 
 class register(models.Model):
     Name = models.CharField(max_length=255)
@@ -15,6 +16,7 @@ class register(models.Model):
     Phone = models.CharField(max_length=12)
     date   = models.CharField(max_length=20)
     message =  models.CharField(max_length=255)
+    status = models.IntegerField(default=0)
 
 class enquery(models.Model):
     Name = models.CharField(max_length=255)
@@ -22,6 +24,7 @@ class enquery(models.Model):
     Phone = models.CharField(max_length=12)
     project = models.CharField(max_length=255)
     message =  models.CharField(max_length=255)
+    status = models.IntegerField(default=0)
 
 class apply(models.Model):
     course = models.CharField(max_length=255)
@@ -29,4 +32,5 @@ class apply(models.Model):
     Email = models.EmailField()
     Phone = models.CharField(max_length=12)
     place =  models.CharField(max_length=255)
+    status = models.IntegerField(default=0)
 
