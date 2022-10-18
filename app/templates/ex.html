@@ -1,192 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  {% load static %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body  %}
+
+
 <style>
-    body{
-        font-family: "poppins";
-        font-style: normal;
-    }
-</style>
-<body>
-<div style="position: absolute;
-width: 1380px;
-height: 105px;
-left: 0px;
-top: 0px;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  </style>
 
-background: #FFFFFF;
-box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.12);">
-<nav style="position: absolute;
-width: 1380px;
-height: 105px;
-left: 0px;
-top: 0px;
-
-background: #FFFFFF;
-box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.12);" class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="static/images/logo.png" style="position:absolute;width: 292px;
-        height: 97px;left: 67px;top: -6px;" ></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a style="position: absolute;
-          width: 47px;
-          height:24px;
-          left: 481px;
-          top: 42px;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 24px;
-          color: blue;"
-          
-           class="nav-link" href="#">Home </a>
-        </li>
-        <li class="nav-item">
-          <a style="position: absolute;
-          width:80px;
-          height:24px;
-          left: 616px;
-          top: 42px;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 24px;" class="nav-link" href="#">ABOUTUS</a>
-        </li>
-        <li class="nav-item">
-          <a style="position: absolute;
-          width:75px;
-          height:24px;
-          left: 780px;
-          top: 42px;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 24px;" class="nav-link" href="#">TRAINING</a>
-        </li>
-        <li class="nav-item">
-          <a style="position: absolute;
-          width:79px;
-          height:24px;
-          left: 934px;
-          top: 42px;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 24px;" class="nav-link " href="#">CONTACT</a>
-        </li>
-      </ul>
-    </div></div><br><br><br><br><br><br>
-
-    <div class="card bg-dark ">
-        <img class="card-img" src="static/images/w.jpg" alt="Card image" style="position: absolute;
-        width: 1380px;
-        height: 459px;
-        left: 0px;
-        top: 0px;" >
-        <div class="card-img-overlay">
-          <div class="row">
-            <div class="col"><br>
-                <hr style="position: absolute;width: 280px;height: 5px;background-color: #1E4D69;border-color:  #1E4D69;  left: 110px;">
-                <h5 style="position: absolute;height: 36px;
-                left: 110px;
-                top: 58px;font-weight: 500;
-                font-size: 24px;
-                line-height: 36px;" class="card-title">SECURE & IT SOLUTIONS</h5>
-          <h3 style="position: absolute;
-      
-          height:81px;
-          left: 108px;
-          top: 90px;font-weight: 500;
-          font-size: 40px;
-          line-height: 88px;" style="text-transform:none ;">Excellent IT Solutions </h3>
-         
-          <h3 style="position: absolute;
-      
-          height:81px;
-          left: 108px;
-          top: 140px;font-weight: 500;
-          font-size: 40px;
-          line-height: 88px;" style="text-transform:none ;">For Your<span  style="color:rgb(208, 27, 27);">&nbsp;<b>Success</b></span></h3>
-    <p style="position: absolute;
-      color: rgba(0, 0, 0, 0.53);
-    height:27px;
-    left: 110px;
-    top: 210px;font-weight: 500;
-    font-size: 15px;
-    line-height: 22px;">Lorem ipsum dolor sit amet adipisicing elit.Lorem ipsum dolor sit amet adipisicing elit</p>
-    <a  style="position: absolute;
- background: #1E4D69;
-border-radius: 5px;
-  height:40px;
-  left: 110px;
-  top: 250px;font-weight: 500;
-  font-size: 15px;
-  line-height: 22px;" href="#" class="btn btn-primary">learn more&nbsp&nbsp<i class="fa fa-arrow-right fa-sm" aria-hidden="true"></i></a>
+  
+  <h2>Responsive Table</h2>
+  <p>A responsive table will display a horizontal scroll bar if the screen is too 
+  small to display the full content. Resize the browser window to see the effect:</p>
+  <p>To create a responsive table, add a container element (like div) with <strong>overflow-x:auto</strong> around the table element:</p>
+  
+  <div style="overflow-x: auto;">
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+        <th>Points</th>
+        <th>Points</th>
+        <th>Points</th>
+        <th>Points</th>
+        <th>Points</th>
+        <th>Points</th>
+        <th>Points</th>
+        <th>Points</th>
+        <th>Points</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>Adam</td>
+        <td>Johnson</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+        <td>67</td>
+      </tr>
+    </table>
+  </div>
     
-            
-<style>
-        header {
-          height: 100vh;
-          width: 100%;
-          color: white;
-        
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          
-          background: linear-gradient(to top, #3204fdba, #9907facc), url({% static "images/down.png" %}); 
-          background-repeat:no-repeat;
-        }
-        
-        </style>
-        <header>Hello World</header><br>
-<style>
-    .box {
-      background:  url({% static "images/w.jpg" %}); 
-      background-repeat:no-repeat;
-    
-}
-</style>
-        <div class="box">
-          <div class="row">
-         <div style="margin-left: 50px;"  class="col-sm">
-          <br><br>
-          <h5  style= "font-family: poppins;
-          font-style: normal;" class="card-title">SECURE & IT SOLUTIONS</h5>
-          <h3  style="text-transform:none ;font-family: poppins;
-          font-style: normal;font-size: 45px;"><b>Excellent IT Solutions</b><br><b>ForYour</b><span  style="color:rgb(208, 27, 27);">&nbsp;<b>Success</b></span></h3>
-    <p style="font-family: poppins;
-    font-style: normal;">Lorem ipsum dolor sit amet adipisicing elit.</p>
-    <a style="float:left ;background-color: #1E4D69;border-radius: 5px;" href="#" class="btn btn-primary">learn more&nbsp&nbsp<i class="fa fa-arrow-right fa-sm" aria-hidden="true"></i></a>
-    
-             
-          
-          </div>
-            <div class="col-sm"><br>
-              <img class="mx-auto d-block" src="static/images/slider-single-img2.png" style="width:80%;height:320px;float: left;" alt="">         </div></div></div>
 
-        </div></div>
-       
-  <br>
-  <div class="card bg-dark text-white">
-    <img class="card-img" src="static/images/w.jpg" height="50%" alt="Card image" style="opacity:20%;">
-    <div class="card-img-overlay">
-      <div class="row">
-        <div class="col"  style="width:40%;"><br>
-      <h5 class="card-title">//OUR CASE STUDY</h5>
-      <h3>Introduce Our Ongoing Projects</h3>
-        </div>
-        <div class="col-md-8"  style="width:60%;">
-      <p class="card-text"><br>Software development outsourcing is just a tool to achieve business goals.But there is no way to get worthwhile results without cooperation our service and trust between a client company</p>
-      </div>
-
-</body>
-</html>
-
+{% endblock  %}

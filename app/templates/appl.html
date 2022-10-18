@@ -18,33 +18,30 @@
         }
         th{
             font-size: 16px;
-            background-color: #1E4D69;
+            background-color: gray;
         }
-        td{
-            font-size: 18px;
-        }
-    .title{
-        margin: auto;
+        table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
     }
-    .de{
-        color:  #19B3D3;
-    }
-    .de:hover{
-    color: rgb(0, 255, 21);
-
-
+   
     
-  }
+    tr:nth-child(even) {
+      background-color: rgb(228, 221, 221);
+    }
 
-  
+
+ 
 </style>
 
 <div class="container-fluid" style="margin-left:2%;width: 90%; ">
    
-<h1 class="text-center" style="color:  #19B3D3 ;text-align: center;"> Show Applications</h1>
- <table  >
-    <thead>
-    <tr>
+<h1 class="text-center" style="color:  gray ;text-align: center;"> Show Applications</h1>
+<div style="overflow-x:auto;">
+<table  >
+    <thead >
+    <tr >
         
         <th>Name</th>
         <th>Email</th>
@@ -62,17 +59,20 @@
         <td style="color:#1E4D69 ;">{{ p.Email }}</td>
         <td style="color:#1E4D69 ;">{{ p.Phone }}</td>
         <td style="color:#1E4D69 ;">{{ p.course }}</td>
-        <td> {% if p.status == 0 %}
-            <button style="background-color:yellow;color:#fff;"><a href="{% url 'appl_approve' p.id %}" class="btn btn-success">Approve</a></button>
-        <button style="background-color:yellow"><a href="{% url 'appl_reject' p.id %}" class="btn btn-danger">Reject</a></button>
+        <td> <center>
+            {% if p.status == 0 %}
+            <a href="{% url 'appl_approve' p.id %}" class="btn btn-success">Approve</a>
+        <a href="{% url 'appl_reject' p.id %}" class="btn btn-danger">Reject</a>
         {% elif p.status == 1 %}
             <button style="background-color:green ; color:#fff;" class="btn btn-warning" disabled="disabled">Approved</button>
         {% else %}
             <button style="background-color:red ; color:#fff;" class="btn btn-danger" disabled="disabled">Rejected</button>
-        {% endif %}</td> 
-        <td> 
+        {% endif %}
+    </center>
+    </td> 
+        <td> <center>
             <!--<button class="btn btn-primary"><a class=" de" href="#editCourseModal-{{forloop.counter}}" class="edit" data-toggle="modal">Edit</a></button>-->
-            <button style="padding:2px; height:30px;width: 60px;background-color: rgb(62, 219, 62);border-color: rgb(62, 219, 62); "><a  rol="button" class="btn  btn-sm " href="{% url 'delete_apply' p.id %}" class="delete"><i style="color:red ;" class="fa-solid fa-trash-can fa-lg"></i></a></button></td>
+            <button style="padding:2px; height:30px;width: 60px;background-color: rgb(62, 219, 62);border-color: rgb(62, 219, 62); "><a  rol="button" class="btn  btn-sm " href="{% url 'delete_apply' p.id %}" class="delete"><i style="color:red ;" class="fa-solid fa-trash-can fa-lg"></i></a></button></center></td>
     </tr>
    
     {% endfor %}
@@ -80,26 +80,12 @@
  </table>
 
 
-
+</div>
 </div>
 
 <style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
     
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }
-    </style>
+   </style>
 
     
 

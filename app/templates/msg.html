@@ -19,7 +19,7 @@
         }
         th{
             font-size: 16px;
-            background-color: #1E4D69;
+            background-color: rosybrown;
         }
         td{
             font-size: 18px;
@@ -44,7 +44,7 @@
 
 <div class="container-fluid" style="margin-left:2%;width: 90%; ">
    
-<h1 class="text-center" style="color:  #19B3D3 ;text-align: center;"> Show Messages</h1>
+<h1 class="text-center" style="color:  rosybrown ;text-align: center;"> Show Messages</h1>
  <table >
     <thead>
     <tr>
@@ -65,16 +65,20 @@
         <td >{{ p.Email }}</td>
         <td >{{ p.Phone }}</td>
         <td >{{ p.massage }}</td>
-        <td> {% if p.status == 0 %}
-            <button style="background-color:yellow;color:#fff;"><a href="{% url 'msg_approve' p.id %}" class="btn btn-success">Approve</a></button>
-        <button style="background-color:yellow"><a href="{% url 'msg_reject' p.id %}" class="btn btn-danger">Reject</a></button>
+
+        <td><center>
+             {% if p.status == 0 %}
+            <a href="{% url 'msg_approve' p.id %}" class="btn btn-success">Approve</a>
+     <a href="{% url 'msg_reject' p.id %}" class="btn btn-danger">Reject</a>
         {% elif p.status == 1 %}
             <button style="background-color:green ; color:#fff;" class="btn btn-warning" disabled="disabled">Approved</button>
         {% else %}
             <button style="background-color:red ; color:#fff;" class="btn btn-danger" disabled="disabled">Rejected</button>
-        {% endif %}</td> 
-        <td> 
-            <button style="padding:2px; height:30px;width: 60px;background-color: rgb(62, 219, 62);border-color: rgb(62, 219, 62); "><a  rol="button" class="btn  btn-sm " href="{% url 'delete_user' p.id %}" class="delete"><i style="color:red ;" class="fa-solid fa-trash-can fa-lg"></i></a></button></td>
+        {% endif %}
+    </center>
+</td> 
+        <td> <center>
+            <button style="padding:2px; height:30px;width: 60px;background-color: rgb(62, 219, 62);border-color: rgb(62, 219, 62); "><a  rol="button" class="btn  btn-sm " href="{% url 'delete_user' p.id %}" class="delete"><i style="color:red ;" class="fa-solid fa-trash-can fa-lg"></i></a></button></center></td>
 
             <!--<button class="btn btn-primary"><a class=" de" href="#editCourseModal-{{forloop.counter}}" class="edit" data-toggle="modal">Edit</a></button>-->
     </tr>
@@ -159,14 +163,10 @@
         width: 100%;
       }
       
-      td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
+     
       
       tr:nth-child(even) {
-        background-color: #dddddd;
+        background-color: rgb(251, 223, 223);
       }
       </style>
 {% endblock content %}
