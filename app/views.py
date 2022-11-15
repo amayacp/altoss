@@ -31,6 +31,9 @@ def course(request):
 def signin(request):
     return render(request, 'signin.html')
 
+def aboutus(request):
+    return render(request, 'aboutus.html')
+
 
 
 def user_login (request):
