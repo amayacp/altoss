@@ -34,6 +34,10 @@ def signin(request):
 def aboutus(request):
     return render(request, 'aboutus.html')
 
+def digital(request):
+    return render(request, 'digital.html')
+def core(request):
+    return render(request, 'core.html')
 
 
 def user_login (request):

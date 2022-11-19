@@ -9,7 +9,11 @@ urlpatterns = [
     path('contact',views.contact,name='contact'),
     path('course',views.course,name='course'),
     path('aboutus',views.aboutus,name='aboutus'),
+    path('digital',views.digital,name='digital'),
+    path('core',views.core,name='core'),
     path('base',views.base,name='base'),
+
+
     path('add_user',views.add_user,name='add_user'),
     path('reg',views.reg,name='reg'),
     path('enquerys',views.enquerys,name='enquerys'),

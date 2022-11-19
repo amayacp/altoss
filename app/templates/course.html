@@ -21,6 +21,12 @@
               <a class="nav-link " href="{% url 'aboutus' %}">ABOUT US</a>
             </li>
             <li class="nav-item mx-lg-3">
+              <a class="nav-link " href="{% url 'digital' %}">SERVICES</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link "    href="{% url 'core' %}">PRODUCT</a>
+            </li>
+            <li class="nav-item mx-lg-3">
               <a class="nav-link "  href="{% url 'training' %}">TRAINING</a>
             </li>
             <li class="nav-item">
@@ -39,6 +45,7 @@
     <style>
       .nav-item a {
         font-size: 18px;
+        text-align: center;
       }
   
       .nav-link {
@@ -161,7 +168,7 @@
                             
                                       <div class="form-outline mb-4 " >
                                        
-                                        <input type="number"  class="form-control form-control-lg" name="Phone" placeholder="Enter Phone Number" >
+                                        <input type="number"  class="form-control form-control-lg" pattern="[1-9]{1}[0-9]{9}" name="Phone" placeholder="Enter Phone Number" >
                                       </div>
                                       <div class="form-outline mb-4 " >
                                        

@@ -1,0 +1,1306 @@
+{% extends 'base.html' %}
+{% load static %}
+- favicon
+-->
+<link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+<!-- 
+  - custom css link
+-->
+
+
+<!-- 
+  - google font link
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+  rel="stylesheet">
+
+{% block body %}
+<section class="navbar m-0 p-0 container-fluid shadow ">
+    <nav class="navbar navbar-expand-lg navbar-light w-100 py-3">
+      <div class="container ">
+        <a class="navbar-brand " href="#"><img src="static/images/logo.png" width="200px" height="50px" alt=""></a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown2"
+          aria-controls="navbarNavDropdown2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown2">
+          <ul class="navbar-nav ">
+            <li class="nav-item ">
+              <a class="nav-link" aria-current="page" href="{% url 'home' %}"><b>HOME</b></a>
+            </li>
+  
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link " href="{% url 'aboutus' %}">ABOUT US</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link "style="color:#029D97;" href="{% url 'digital' %}">SERVICES</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link "    href="{% url 'core' %}">PRODUCT</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link " href="{% url 'training' %}">TRAINING</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="{% url 'contact' %}">CONTACT</a>
+            </li>
+  
+  
+  
+  
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <style>
+      .nav-item a {
+        font-size: 18px;
+        text-align: center;
+      }
+  
+      .nav-link {
+        font-weight: 800;
+      }
+    </style>
+  </section>
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Altos Marketing Agency</p>
+
+            <h1 class="h1 hero-title">We are available for marketing</h1>
+
+            <p class="hero-text">
+              We are the world’s most significant leading
+agency for digital marketing.
+            </p>
+
+            
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="static/images/d3.png" width="720" height="673" alt="hero banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="service" aria-label="service">
+        <div class="container">
+
+          <h2 class="h2 section-title">Services We Provided</h2>
+
+          <p class="section-text">
+            We have been actively providing these services since 20__
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #13c4a1">
+                  <ion-icon name="search"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">SEO Optimization</a>
+                </h3>
+
+                <p class="card-text">
+                  The process of improving your site to increase its visibility when people search for products or services related to your business in Google, Bing, and other search engines.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #6610f2">
+                  <ion-icon name="desktop"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Digital Marketing</a>
+                </h3>
+
+                <p class="card-text">
+                  Also called online marketing, is the promotion of brands to connect with potential customers using the internet and other forms of digital communication.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #ffb700">
+                  <ion-icon name="bulb"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Content
+                    marketing</a>
+                </h3>
+
+                <p class="card-text">
+                  Content marketing is a marketing strategy used to attract, engage, and retain an audience by creating and sharing relevant articles, videos, podcasts, and other media.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon" style="background-color: #fc3549">
+                  <ion-icon name="phone-portrait"></ion-icon>
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">App store optimization</a>
+                </h3>
+
+                <p class="card-text">
+                  It is the process of optimizing mobile apps to rank higher in an app store's search results. The higher your app ranks , the more visible it is to potential customers.
+                  </p>
+  
+                </div>
+              </li>
+  
+              <li>
+                <div class="service-card">
+  
+                  <div class="card-icon" style="background-color: #d28900">
+                    <ion-icon name="archive"></ion-icon>
+                  </div>
+  
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Email Marketing</a>
+                  </h3>
+  
+                  <p class="card-text">
+                    Email marketing is a form of marketing that can make the customers on your email list aware of new products, discounts, and other services.
+                  </p>
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+  
+                  <div class="card-icon" style="background-color: #d200a8">
+                    <ion-icon name="chatbox-outline"></ion-icon>
+                  </div>
+  
+                  <h3 class="h3">
+                    <a href="#" class="card-title">SMS Marketing</a>
+                  </h3>
+  
+                  <p class="card-text">
+                    SMS is one of the most convenient channels for communicating with your customers, and one of the most preferred mediums by customers themselves.
+                  </p>
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+  
+                  <div class="card-icon" style="background-color: #00d280">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                  </div>
+  
+                  <h3 class="h3">
+                    <a href="#" class="card-title">WhatsApp Marketing</a>
+                  </h3>
+  
+                  <p class="card-text">
+                    You can use it to send reminders about abandoned shopping carts, share special offers and coupons, or even answer customer questions in real time.
+                  </p>
+  
+                </div>
+              </li>
+  
+              <li>
+                <div class="service-card">
+  
+                  <div class="card-icon" style="background-color: #ff612f">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </div>
+  
+                  <h3 class="h3">
+                    <a href="#" class="card-title">LinkedIn Marketing</a>
+                  </h3>
+  
+                  <p class="card-text">
+                    It is using the platform to market your business or company. It can be used as a marketing tool too as it allows you to easily segment your target audience.                  </p>
+  
+                </div>
+              </li>
+  
+            </ul>
+  
+          </div>
+        </section>
+  
+  <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <div class="about-banner img-holder" style="--width: 720; --height: 1000;">
+            <img src="static/images/d4.jpg" width="720" height="1000" loading="lazy" alt="about banner"
+              class="img-cover">
+
+          </div>
+
+          <div class="about-content">
+
+            <h2 class="h2 section-title">About Us</h2>
+
+            <p class="section-text">
+              We are the world’s most significant leading
+agency for digital marketing, content
+marketing, SEO ,App store optimization , Email Marketing, LinkedIn Marketing, WhatsApp Marketing and SMS Marketing since 2015
+            </p>
+
+            <h3 class="h3">Who We Are</h3>
+
+            <p class="section-text">
+              We produce outstanding results. Others highlight design or templated approaches, but we don’t, we grow revenue. Our methodology is proven and accountable, with hundreds of successful companies and validated by over 350+ happy client , who will share how their business increased by 100-1135%.
+            </p>
+
+            <h3 class="h3">Our Success</h3>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  We’ve helped to substantially grow many of the most successful and fastest growing brands in the world that include small to midsize businesses.
+.
+                </p>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  Since 2015 , we have created countless successful campaigns, in several industry categories, and generated billions in sales for our clients.
+                </p>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
+
+                <p class="section-text">
+                  Every one of our campaigns is recorded in our methodology data files and delivers certainty on what strategies and tactics drive specific results for each vertical
+                </p>
+              </li>
+
+            </ul>
+
+            <h3 class="h3">Our Mission</h3>
+
+            <p class="section-text">
+              To provide innovative and effective integrated brand marketing and public relations solutions that help our clients grow their businesses and realize their marketing goals.We will be best in providing consistently successful, unique, and forward-thinking digital marketing solutions that take into account the individual requirements and unique demands of each client.
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-label="contact">
+        <div class="container">
+
+          <h2 class="h2 section-title"> Contact Us</h2>
+
+          
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Mail Here</h3>
+
+                  <a href="mailto:hello@luaz.com" class="card-link">info@altostechnologies.in</a>
+                  <br>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="map-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Visit Here</h3>
+
+                  <address class="card-address">
+                    1st Floor,Carnival Infopark Phase 1,<br>
+                    Kakkand Eranakulam, Kerala, India 682042.
+                   
+                  </address>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-card">
+
+                <div class="card-icon">
+                  <ion-icon name="headset-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Call Here</h3>
+
+                  <a href="tel:+1234567890" class="card-link">+919746632202</a>
+                  <br>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+ <!-- 
+        - #CTA
+      -->
+
+      <br>
+      <center>
+        <a href="#" class="btn btn-secondary">BACK TO TOP </a>
+      </center><br>
+      <style>
+        /*-----------------------------------*\
+        #style.css
+      \*-----------------------------------*/
+      
+      /**
+       * copyright 2022 codewithsadee
+       */
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+        #CUSTOM PROPERTY
+      \*-----------------------------------*/
+      
+      :root {
+      
+      /**
+       * colors
+       */
+      
+      --safety-orange: hsl(25, 100%, 50%);
+      --lavender-gray: hsl(230, 19%, 81%);
+      --persian-rose: hsl(328, 100%, 59%);
+      --red-crayola: hsl(341, 100%, 49%);
+      --eerie-black: hsl(240, 6%, 10%);
+      --light-gray: hsl(0, 0%, 80%);
+      --cultured-2: hsl(210, 60%, 98%);
+      --platinum: hsl(0, 0%, 90%);
+      --gray-web: hsl(220, 5%, 49%);
+      --cultured: hsl(0, 0%, 93%);
+      --black_10: hsla(0, 0%, 0%, 0.1);
+      --black_5: hsla(0, 0%, 0%, 0.05);
+      --white-1: hsl(0, 0%, 100%);
+      --white-2: hsl(0, 14%, 98%);
+      --black: hsl(0, 0%, 0%);
+      
+      /**
+       * gradient color
+       */
+      
+      --gradient: linear-gradient(to left top, var(--persian-rose), var(--safety-orange));
+      
+      /**
+       * typography
+       */
+      
+      --ff-roboto: 'Roboto', sans-serif;
+      --ff-league-spartan: 'League Spartan', sans-serif;
+      
+      --fs-1: 3.5rem;
+      --fs-2: 3rem;
+      --fs-3: 2.1rem;
+      --fs-4: 1.7rem;
+      --fs-5: 1.4rem;
+      --fs-6: 1.3rem;
+      
+      --fw-700: 700;
+      --fw-500: 500;
+      
+      /**
+       * spacing
+       */
+      
+      --section-padding: 60px;
+      
+      /**
+       * shadow
+       */
+      
+      --shadow-1: 0 6px 24px var(--black_5);
+      --shadow-2: 0 2px 28px var(--black_10);
+      
+      /**
+       * border radius
+       */
+      
+      --radius-2: 2px;
+      --radius-5: 5px;
+      --radius-8: 8px;
+      
+      /**
+       * transition
+       */
+      
+      --transition-1: 0.25s ease;
+      --transition-2: 0.5s ease;
+      --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+      
+      }
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #RESET
+      \*-----------------------------------*/
+      
+      *,
+      *::before,
+      *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+      
+      li { list-style: none; }
+      
+      a {
+      text-decoration: none;
+      color: inherit;
+      }
+      
+      a,
+      img,
+      span,
+      time,
+      label,
+      input,
+      button,
+      textarea,
+      ion-icon { display: block; }
+      
+      img { height: auto; }
+      
+      input,
+      button,
+      textarea {
+      background: none;
+      border: none;
+      font: inherit;
+      }
+      
+      input,
+      textarea { width: 100%; }
+      
+      button { cursor: pointer; }
+      
+      ion-icon { pointer-events: none; }
+      
+      address { font-style: normal; }
+      
+      html {
+      font-family: var(--ff-roboto);
+      font-size: 10px;
+      scroll-behavior: smooth;
+      }
+      
+      body {
+      background-color: var(--white-1);
+      color: var(--gray-web);
+      font-size: 1.6rem;
+      line-height: 1.8;
+      }
+      
+      ::-webkit-scrollbar { width: 10px; }
+      
+      ::-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
+      
+      ::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
+      
+      ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+      
+      :focus-visible { outline-offset: 4px; }
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #REUSED STYLE
+      \*-----------------------------------*/
+      
+      .container { padding-inline: 15px; }
+      
+      .btn {
+      max-width: max-content;
+      color: var(--white-1);
+      font-size: var(--fs-6);
+      font-weight: var(--fw-700);
+      padding: 10px 30px;
+      border-radius: var(--radius-5);
+      transition: var(--transition-1);
+      }
+      
+      .btn-primary {
+      background-image: var(--gradient);
+      background-size: 1000%;
+      }
+      
+      .btn-primary:is(:hover, :focus) { background-position: bottom right; }
+      
+      .btn-secondary {
+      background-color: var(--white-1);
+      color: var(--eerie-black);
+      }
+      
+      .btn-secondary:is(:hover, :focus) {
+      background-color: var(--eerie-black);
+      color: var(--white-1);
+      }
+      
+      .section { padding-block: var(--section-padding); }
+      
+      .h1,
+      .h2,
+      .h3 {
+      color: var(--eerie-black);
+      font-family: var(--ff-league-spartan);
+      line-height: 1.2;
+      }
+      
+      .h1 { font-size: var(--fs-1); }
+      
+      .h2 { font-size: var(--fs-2); }
+      
+      .h3 { font-size: var(--fs-3); }
+      
+      .w-100 { width: 100%; }
+      
+      .section-title,
+      .section-text { text-align: center; }
+      
+      .section-text { font-size: var(--fs-6); }
+      
+      .grid-list {
+      display: grid;
+      gap: 30px;
+      }
+      
+      .img-holder {
+      aspect-ratio: var(--width) / var(--height);
+      background-color: var(--light-gray);
+      }
+      
+      .img-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      }
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #HEADER
+      \*-----------------------------------*/
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #HEO
+      \*-----------------------------------*/
+      
+      .hero {
+      padding-block-start: calc(var(--section-padding) + 50px);
+      text-align: center;
+      }
+      
+      .hero-content { margin-block-end: 30px; }
+      
+      .hero-subtitle {
+      color: var(--eerie-black);
+      font-size: var(--fs-5);
+      font-weight: var(--fw-500);
+      }
+      
+      .hero-title { margin-block: 12px 8px; }
+      
+      .hero-text { font-size: var(--fs-5); }
+      
+      .hero .btn {
+      margin-inline: auto;
+      margin-block-start: 20px;
+      }
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #SERVICE
+      \*-----------------------------------*/
+      
+      .service { background-color: var(--white-2); }
+      
+      .service .section-text { margin-block: 5px 35px; }
+      
+      .service-card {
+      background-color: var(--white-1);
+      padding: 20px 15px;
+      border: 1px solid var(--platinum);
+      border-radius: var(--radius-5);
+      text-align: center;
+      box-shadow: var(--shadow-1);
+      transition: var(--transition-2);
+      }
+      
+      .service-card:is(:hover, :focus-within) { transform: translateY(-10px); }
+      
+      .service-card .card-icon {
+      color: var(--white-1);
+      font-size: 25px;
+      max-width: max-content;
+      margin-inline: auto;
+      padding: 18px;
+      border-radius: 50%;
+      }
+      
+      .service-card .card-title { margin-block: 20px 8px; }
+      
+      .service-card .card-text { font-size: var(--fs-6); }
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #PROJECT
+      \*-----------------------------------*/
+     
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #ABOUT
+      \*-----------------------------------*/
+      
+      .about { background-color: var(--white-2); }
+      
+      .about-banner {
+      position: relative;
+      border-radius: var(--radius-5);
+      overflow: hidden;
+      margin-block-end: 25px;
+      }
+      
+      .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--white-1);
+      color: var(--red-crayola);
+      font-size: 32px;
+      padding: 16px;
+      border-radius: 50%;
+      animation: pulse 1.5s ease-out infinite;
+      }
+      
+      @keyframes pulse {
+      0% { box-shadow: 0 0 0 1px var(--white-1); }
+      100% { box-shadow: 0 0 0 25px transparent; }
+      }
+      
+      .about :is(.section-title, .section-text) { text-align: left; }
+      
+      .about .section-title { margin-block-end: 5px; }
+      
+      .about .section-text:not(:last-child) { margin-block-end: 18px; }
+      
+      .about .h3 { margin-block-end: 8px; }
+      
+      .about-list { margin-block: 15px 18px; }
+      
+      .about-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      }
+      
+      .about-item ion-icon {
+      color: var(--red-crayola);
+      flex-shrink: 0;
+      margin-block-start: 2px;
+      }
+      
+      .about-item:not(:last-child) { margin-block-end: 12px; }
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #CTA
+      \*-----------------------------------*/
+      
+      .cta {
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: 1;
+      }
+      
+      .cta::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: var(--gradient);
+      opacity: 0.95;
+      z-index: -1;
+      }
+      
+      .cta-subtitle,
+      .cta .section-title { color: var(--white-1); }
+      
+      .cta-subtitle {
+      font-size: var(--fs-6);
+      font-weight: var(--fw-500);
+      text-align: center;
+      }
+      
+      .cta .section-title { margin-block: 12px 18px; }
+      
+      .cta .btn { margin-inline: auto; }
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #BLOG
+      \*-----------------------------------*/
+     
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #CONTACT
+      \*-----------------------------------*/
+      .contact { background-color: var(--white-2); }
+
+.contact .section-text { margin-block: 5px 35px; }
+
+
+.contact-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px 25px;
+}
+
+.contact-item { min-width: 100%; }
+
+.contact-card {
+background-color: var(--white-1);
+padding: 20px;
+border-radius: var(--radius-2);
+box-shadow: var(--shadow-1);
+display: flex;
+align-items: flex-start;
+gap: 15px;
+}
+
+.contact-card .card-icon {
+background-color: var(--cultured-2);
+color: var(--red-crayola);
+font-size: 25px;
+padding: 13px;
+border-radius: 50%;
+transition: var(--transition-1);
+}
+
+.contact-card:is(:hover, :focus) .card-icon {
+background-color: var(--red-crayola);
+color: var(--white-1);
+}
+
+.contact-card .card-title { margin-block-end: 5px; }
+
+.contact-card :is(.card-link, .card-address) {
+font-size: var(--fs-6);
+transition: var(--transition-1);
+}
+
+.contact-card .card-link:is(:hover, :focus) { color: var(--red-crayola); }
+
+
+
+      
+      /*-----------------------------------*\
+      #FOOTER
+      \*-----------------------------------*/
+      
+     
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #BACK TO TOP
+      \*-----------------------------------*/
+      
+      .back-top-btn {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      background-color: var(--eerie-black);
+      color: var(--white-1);
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: var(--shadow-2);
+      z-index: 4;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-1);
+      }
+      
+      .back-top-btn.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-10px);
+      }
+      
+      .back-top-btn:is(:hover, :focus) { opacity: 0.9; }
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #MEDIA QUERIES
+      \*-----------------------------------*/
+      
+      /**
+      * responsive for larger than 575px screen
+      */
+      
+      @media (min-width: 575px) {
+      
+      /**
+       * REUSED STYLE
+       */
+      
+      .container {
+        max-width: 540px;
+        width: 100%;
+        margin-inline: auto;
+      }
+      
+      .grid-list {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+      }
+      
+      
+      
+      
+      
+      
+      
+      /**
+       * CONTACT
+       */
+      
+      .input-wrapper {
+        display: flex;
+        gap: 15px;
+      }
+      
+      .contact-item { min-width: calc(50% - 18px); }
+      
+      }
+      
+      
+      
+      
+      
+      /**
+      * responsive for larger than 768px screen
+      */
+      
+      @media (min-width: 768px) {
+      
+      /**
+       * CUSTOM PROPERTY
+       */
+      
+      :root {
+      
+        /**
+         * typography
+         */
+      
+        --fs-1: 4.5rem;
+        --fs-2: 3.7rem;
+        --fs-3: 2.3rem;
+        --fs-4: 1.8rem;
+        --fs-5: 1.5rem;
+        --fs-6: 1.4rem;
+      
+      }
+      
+      
+      
+      /**
+       * REUSED STYLE
+       */
+      
+      .container { max-width: 720px; }
+      
+      .section-text {
+        max-width: 65ch;
+        margin-inline: auto;
+      }
+      
+      
+      
+      /**
+       * HERO
+       */
+      
+      .hero-text {
+        max-width: 60ch;
+        margin-inline: auto;
+      }
+      
+      
+      
+      /**
+       * ABOUT
+       */
+      
+      .about-banner { max-width: 550px; }
+      
+      .about .section-text {
+        max-width: unset;
+        margin-inline: 0;
+      }
+      
+      
+      
+     
+      }
+      
+      
+      
+      
+      
+      /**
+      * responsive for larger than 992px screen
+      */
+      
+      @media (min-width: 992px) {
+      
+      /**
+       * CUSTOM PROPERTY
+       */
+      
+      :root {
+      
+        /**
+         * typography
+         */
+      
+        --fs-1: 5rem;
+        --fs-2: 4rem;
+        --fs-3: 2.5rem;
+      
+        /**
+         * spacing
+         */
+      
+        --section-padding: 100px;
+      
+      }
+      
+      
+      
+      /**
+       * REUSED STYLE
+       */
+      
+      .container { max-width: 960px; }
+      
+      .grid-list { grid-template-columns: repeat(3, 1fr); }
+      
+      
+      
+    
+      
+      
+      /**
+       * HERO
+       */
+      
+      .hero .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+        text-align: left;
+      }
+      
+      .hero-content { margin-block-end: 0; }
+      
+      .hero-subtitle {
+        position: relative;
+        padding-inline-start: 15px;
+      }
+      
+      .hero-subtitle::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background-color: var(--red-crayola);
+      }
+      
+      .hero-text,
+      .hero .btn { margin-inline: 0; }
+      
+      
+      
+      /**
+       * SERVICE
+       */
+      
+      .service-card { padding: 20px; }
+      
+      .service-card .h3 { --fs-3: 2.3rem; }
+      
+      
+      
+      /**
+       * PROJECT
+       */
+      
+      .project-card .card-subtitle { --fs-6: 1.5rem; }
+      
+      
+      
+      /**
+       * ABOUT
+       */
+      
+      .about .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+      }
+      
+      .about-banner { margin-block-end: 0; }
+      
+      
+      
+   
+      
+      
+      
+      /**
+      * responsive for larger than 1200px screen
+      */
+      
+      @media (min-width: 1200px) {
+      
+      /**
+       * CUSTOM PROPERTY
+       */
+      
+      :root {
+      
+        /**
+         * typography
+         */
+      
+        --fs-1: 6.8rem;
+        --fs-2: 4.5rem;
+        --fs-4: 1.9rem;
+        --fs-5: 1.6rem;
+        --fs-6: 1.6rem;
+      
+      }
+      
+      
+      
+      /**
+       * REUSED STYLE
+       */
+      
+      .container { max-width: 1140px; }
+      
+      .btn { --fs-6: 1.5rem; }
+      
+      
+      
+      /**
+       * SERVICE
+       */
+      
+      .service-card { padding: 30px; }
+      
+      .service-card .h3 { --fs-3: 2.5rem; }
+      
+      
+     
+      
+      
+      /**
+       * ABOUT
+       */
+      
+      .about .container { gap: 60px; }
+      
+      .about-item { gap: 7px; }
+      
+      .about-item ion-icon { font-size: 20px; }
+      
+      
+      
+      /**
+       * CTA
+       */
+      
+      .cta .section-title { margin-block: 15px 24px; }
+      
+      
+    }
+  }
+      </style>
+      
+      
+        <!-- 
+          - #FOOTER
+        -->
+      
+        
+      
+      
+      
+      
+      
+        <!-- 
+          - #BACK TO TOP
+        -->
+      
+        <a href="#top" aria-label="back to top" data-back-top-btn class="back-top-btn">
+          <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+        </a>
+      
+      
+      
+      
+      
+        <!-- 
+          - custom js link
+        -->
+        <script src="./assets/js/script.js" defer></script>
+      
+        <!-- 
+          - ionicon link
+        -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      
+      
+  
+
+{% endblock %}

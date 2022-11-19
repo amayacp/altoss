@@ -1,0 +1,799 @@
+
+{% extends 'base.html' %}
+{% load static %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+  rel="stylesheet">
+- favicon
+-->
+<link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+<!-- 
+  - custom css link
+-->
+
+
+<!-- 
+  - google font link
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+  rel="stylesheet">
+
+{% block body %}
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+    --headerclr:#6156F9;
+    --mainclr:#ed358d;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    transition: .2s;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+</style>
+
+<section class="navbar m-0 p-0 container-fluid shadow ">
+    <nav class="navbar navbar-expand-lg navbar-light w-100 py-3">
+      <div class="container ">
+        <a class="navbar-brand " href="#"><img src="static/images/logo.png" width="200px" height="70px" alt=""></a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown2"
+          aria-controls="navbarNavDropdown2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown2">
+          <ul class="navbar-nav ">
+            <li class="nav-item ">
+              <a class="nav-link"aria-current="page" href="{% url 'home' %}"><b>HOME</b></a>
+            </li>
+  
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link " href="{% url 'aboutus' %}">ABOUT US</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link " href="{% url 'digital' %}">SERVICES</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link "  style="color:#029D97;"  href="{% url 'core' %}">PRODUCT</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link " href="{% url 'training' %}">TRAINING</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="{% url 'contact' %}">CONTACT</a>
+            </li>
+  
+  
+  
+  
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <style>
+      .nav-item a {
+        font-size: 14px;
+        text-align: center;
+      }
+  
+      .nav-link {
+        font-weight: 800;
+      }
+    </style>
+  </section>
+
+
+  <section class="home">
+    <div class="main-home">
+        <div class="left-home">
+            <div class="inner-left-content">
+                <h3>Smart CORE Software for Businesses</h3>
+          
+            <p>For Any business personnel, handling too many things at once and not left a work undone is a complicated task at hand. This might cause losing track of scheduled appointments, missing out on notes, faults in taking out details on the amount spend & received overtime and previous background of the client communication, which all results in total chaos. Well not anymore, being the leading custom business management software developers in Kerala, ALTOS Technologies has found the best solution for all your worries. Our CRM software will provide an instant boost to the development of company,
+                 giving a clear insight, detailed reports and analysis offering a reminder via any connected devices.
+            </p>
+            <p id="more" style="display :none">
+                No matter how small or large you are, running multiple businesses, or running IT or non-IT businesses, there is always plethora of activities going on around. The number of companies or organizations investing in business management software is increasing, as it enables them to get things done, predict risks, and improve their productivity. Over the course of the years, business process management tools have evolved and continually 
+                improved for anyone involved in all sorts of business activities. 
+            </p>
+            
+                <button class="b1" onclick="myFunction()">Read more</button>
+        </div>
+            
+
+        </div>
+        <div class="right-home">
+            <img src="static/images/dd.png" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("more");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
+<style>
+
+   
+
+.main-home{
+    padding: 1rem 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-home .left-home{
+    width: 50%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media(max-width:1200px)
+{
+    .main-home .left-home{
+        width: 100%;
+    }
+}
+.inner-left-content h3{
+    font-size: 40px;
+    color: black;
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+.inner-left-content h1{
+    font-size: 40px;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.inner-left-content p{
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+.inner-left-content a , .b1{
+    padding: 1.5rem 3rem;
+    background: var(--headerclr);
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+}
+.inner-left-content a:hover , .b1:hover{
+border-radius: 15px;
+background: var(--mainclr);
+}
+.main-home .right-home{
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+}
+@media(max-width:1200px)
+{
+    .main-home .right-home{
+       display: none;
+    }
+}
+
+
+.main-home .right-home img{
+    width: 100%;
+    margin-top: 50px;
+}
+/* .home{
+    background: url(static/images/d4.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100vh;
+    background-position: right;
+} */
+</style>
+
+
+</section>
+
+
+<!-- who we are -->
+
+<section class="who">
+  <div class="main-who">
+      <div class="inner-who mb-3">
+          <img src="static/images/ss.png" alt="">
+      </div>
+      <div class="inner-who">
+          <div class="inner-who-content">
+              <h2>Ease of Work, Easy Work</h2>
+              <p>You may find it difficult to maintain regular and potential clients as your client database grows. Despite being humans, we are not capable of remembering all these data. You can stay in constant contact with your sales team and uncover more opportunities equally with our marketing automation functionality. The tools we have integrated into our sales, marketing, and customer service help you deliver highly personalized experiences to your customers and gain insight and loyalty from them. As well as tracking the work time, attendance, work quality, and other data, this amazing tool can also do so many other things as well. 
+                By designing CRM solutions, we accelerate business growth by forging close bonds with potential customers. </p>
+             
+          </div>
+      </div>
+  </div>
+
+  <style>
+    .who{
+    padding: 2rem 7%;
+}
+.who h1{
+    color: var(--headerclr);
+    font-size: 40px;
+    text-align: center;
+}
+.main-who{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.inner-who{
+    flex: 1 1 45rem;
+}
+.inner-who img{
+width: 100%;
+}
+.inner-who-content{
+    padding: 0 2rem;
+}
+.inner-who-content h2{
+    color: var(--headerclr);
+    font-size: 40px;
+}
+.inner-who-content p{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    margin-bottom: 25px;
+}
+.inner-who-content a{
+    background: var(--headerclr);
+    padding: 1.5rem 3rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.inner-who-content a:hover{
+    border-radius: 15px;
+    background: var(--mainclr);
+}
+  </style>
+</section>
+
+
+
+<section class="we-offer">
+  <h1>What is a CORE Software?</h1>
+  <div class="inner-who-content">
+    <p>CORE is Employee management software which is used to manage all employees from top level to bottom level. Several modules are associated with this BPM tool, allowing the work force to be divided into layers. This gives the authority to measure the ability of the employees and manage the time flow of work done effectively by transferring duties from one level to another. We offer a platform that is flexible and feature rich for controlling and managing an entire business from anywhere in the world. With our innovative solution, you will be able to integrate real-time data on a 
+        reliable basis and let your organization reach its full potential.</p>
+
+  </div>
+ 
+  <div class="main-offer">
+    <div class="inner-offer">
+
+        <h2>Task/Project Management</h2>
+        <p>With our BPM tool, Tasks can be created for you or a member of your team, and you can use notifications as reminders if needed. 
+            By using the CORE tasks functionality, you can set calendar-synchronized reminders for your customers. Keeps you organized and ensures 
+            that you never miss a sale or unfinished task.</p>
+           
+       
+   
+    </div>
+      <div class="inner-offer">
+
+          <h2>Collaboration</h2>
+          <p>The goal of the collaboration module in CORE is to streamline workflows and processes by utilizing organizational 
+            structures and hierarchies. It also facilitates communication between managers,
+             supervisors, and employees with respect to concepts, ideas, workloads, and tasks.</p>
+             
+     
+      </div>
+
+      
+
+      <div class="inner-offer">
+
+          <h2>Time Management</h2>
+          <p>It is crucial that you manage your time effectively to succeed in your business journey and increase the number of customers that you are satisfied with. By enabling it, Tasks are completed faster and more efficiently, which allows you to devote more time and efforts to other activities.</p>
+         
+     
+      </div>
+
+      <div class="inner-offer">
+
+          <h2>File Management </h2>
+          <p>The business will be able to get rid of all their paperwork and have everything in one location, which may be very advantageous. You can attach and store any documents using the facility. PNG, PDF, JPEG, and CSV are just a few of the supported file types.</p>
+     
+     
+      </div>
+
+      <div class="inner-offer">
+
+          <h2>Employee Management</h2>
+          <p>By using this system, the company and employees' professional and personal details are protected. HRs and business managers undergo less pressure and workload thanks to the employee management system. A BPM tool such as this will provide you with a wide range of solutions that will simplify and expedite your work.</p>
+  
+     
+      </div>
+
+      <div class="inner-offer">
+
+          <h2>Finance Auditing </h2>
+          <p>By reducing gaps in data and removing processes that waste time and resources, a comprehensive CRM audit will enable you to take full advantage of your CRM. This analysis helps you identify the flaws and issues in order to create a sound business plan for the future. </p>
+      
+     
+      </div>
+      <div class="inner-offer">
+
+        <h2>Payroll Management </h2>
+        <p>Payroll is also a crucial system to the operation of your company. Although it might be your largest expense, it is an essential process that must be completed accurately and on time. Besides disburses employees' salaries, this software aids in office administration and manages payroll for your business. </p>
+      
+   
+    </div>
+    <div class="inner-offer">
+
+        <h2>Client Management </h2>
+        <p>The goal of every business is to develop a long-term relationship with its clients. It allows you to define time intervals, set a scale for transactions based on the quality and quantity of the products, increase productivity, and facilitate data collection and analysis in real time.</p>
+       
+   
+    </div>
+    <div class="inner-offer">
+
+        <h2>Progress Tracking  </h2>
+        <p>CRM software simplifies tracking and taking actions to solve any issues by integrating project details, product reports, and contacts for prospects and customers. It allows you to track progress of your employees, thereby identifying their efficiency and assigning work to them accordingly. Result in improving the overall performance of your team. </p>
+    
+   
+    </div>
+    <div class="inner-offer">
+
+        <h2>Reports and Analytics</h2>
+        <p>Providing in-depth details about sales, customer service, and marketing processes is the primary advantage of the Report and Analysis module. Using the CORE, you will be able to generate a custom report that shows profitability, sales forecasts according to the budget, and sales conversion, helping you surpass your competitors.</p>
+       
+   
+    </div>
+    <div class="inner-offer">
+
+        <h2>Easy Documentation</h2>
+        <p>Having access to the business data from anywhere within seconds transforms a business into a major player. The documentation of each transaction and project information will allow you to review past transactions and create new strategies in line with them.</p>
+
+   
+    </div>
+    
+</div>
+<div class="main-offer">
+<div class="inner-offer">
+    <p>We provide CRM development services that are unwaveringly focused on managing various precious assets, as well as employee and customer relationships. To quickly design a Custom CRM software, get in touch with the best CRM software developers in Kerala.</p>
+</div>
+</div>
+
+  <style>
+    .we-offer{
+    padding: 2rem 7%;
+}
+.we-offer h1{
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.we-offer h6{
+    font-size: 15px;
+    
+    margin-bottom: 20px;
+}
+.main-offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.inner-offer{
+    flex: 1 1 300px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.inner-offer:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.inner-offer img{
+    width: 50px;
+}
+.inner-offer h2{
+    font-size: 22px;
+    margin: 1rem 0;
+    color: rgb(21, 42, 228);
+}
+.inner-offer p{
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+.inner-offer a{
+    padding: 1.5rem 3rem;
+    background: var(--mainclr);
+    border-radius: 15px;
+    font-size: 1.5rem;
+    color: white;
+    transition: .5s;
+}
+.inner-offer a:hover{
+    background: var(--headerclr);
+    border-radius: 0;
+}
+
+  </style>
+
+
+</section>
+
+<section>
+    <div class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img  src="static/images/sign.png" class="d-block w-100"  alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="static/images/dd.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="static/images/lea.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="static/images/aaaa.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="static/images/iss.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="static/images/ss.png" class="d-block w-100" alt="...">
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+</section>
+
+<section class="section contact" id="contact" aria-label="contact">
+
+    <h2 class="h2 section-title"> Contact Us</h2>
+
+
+        <div class="main-offer">
+            <div class="inner-offer">
+                <div class="card-icon">
+                    <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                  </div>
+                  <h3 class="h3 card-title"><i style="color: red;" class='bx bx-envelope ' ></i> Mail Here</h3>
+                  <address class="card-address">
+                info@altostechnologies.in
+            </address>
+                  <br>
+    </div>
+    <div class="inner-offer">
+
+        <h3 class="h3 card-title"><i style="color: red;" class='bx bx-map bx-sm'></i> Visit Here</h3>
+        <address class="card-address">
+            1st Floor,Carnival Infopark Phase 1,<br>
+            Kakkand Eranakulam, Kerala, India 682042.
+           
+          </address>
+   
+    </div>
+    <div class="inner-offer">
+       
+        <h3 class="h3 card-title"><i style="color: red;" class='bx bx-phone '></i> Call Here</h3>
+        <address class="card-address">+919746632202</address>
+    
+   <br>
+    </div>
+    
+</section>
+
+
+  
+<style>
+:root {
+      
+      /**
+       * colors
+       */
+     
+      /**
+       * gradient color
+       */
+      
+      --gradient: linear-gradient(to left top, var(--persian-rose), var(--safety-orange));
+      
+      /**
+       * typography
+       */
+      
+      --ff-roboto: 'Roboto', sans-serif;
+      --ff-league-spartan: 'League Spartan', sans-serif;
+      
+      --fs-1: 3.5rem;
+      --fs-2: 3rem;
+      --fs-3: 2.1rem;
+      --fs-4: 1.7rem;
+      --fs-5: 1.4rem;
+      --fs-6: 1.3rem;
+      
+      --fw-700: 700;
+      --fw-500: 500;
+      
+      /**
+       * spacing
+       */
+      
+      --section-padding: 60px;
+      
+      /**
+       * shadow
+       */
+      
+      --shadow-1: 0 6px 24px var(--black_5);
+      --shadow-2: 0 2px 28px var(--black_10);
+      
+      /**
+       * border radius
+       */
+      
+      --radius-2: 2px;
+      --radius-5: 5px;
+      --radius-8: 8px;
+      
+      /**
+       * transition
+       */
+      
+      --transition-1: 0.25s ease;
+      --transition-2: 0.5s ease;
+      --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+      
+      }
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #RESET
+      \*-----------------------------------*/
+      
+      *,
+      *::before,
+      *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+      
+      li { list-style: none; }
+      
+      a {
+      text-decoration: none;
+      color: inherit;
+      }
+      
+      a,
+      img,
+      span,
+      time,
+      label,
+      input,
+      button,
+      textarea,
+      ion-icon { display: block; }
+      
+      img { height: auto; }
+      
+      input,
+      button,
+      textarea {
+      background: none;
+      border: none;
+      font: inherit;
+      }
+      
+      input,
+      textarea { width: 100%; }
+      
+      button { cursor: pointer; }
+      
+      ion-icon { pointer-events: none; }
+      
+      address { font-style: normal; }
+      
+      html {
+      font-family: var(--ff-roboto);
+      font-size: 10px;
+      scroll-behavior: smooth;
+      }
+      
+      body {
+      background-color: var(--white-1);
+      color: var(--gray-web);
+      font-size: 1.6rem;
+      line-height: 1.8;
+      }
+      
+      ::-webkit-scrollbar { width: 10px; }
+      
+      ::-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
+      
+      ::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
+      
+      ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+      
+      :focus-visible { outline-offset: 4px; }
+      
+      
+      
+      
+      
+      /*-----------------------------------*\
+      #REUSED STYLE
+      \*-----------------------------------*/
+      
+      .container { padding-inline: 15px; }
+      
+      .btn {
+      max-width: max-content;
+      color: var(--white-1);
+      font-size: var(--fs-6);
+      font-weight: var(--fw-700);
+      padding: 10px 30px;
+      border-radius: var(--radius-5);
+      transition: var(--transition-1);
+      }
+      
+      .btn-primary {
+      background-image: var(--gradient);
+      background-size: 1000%;
+      }
+      
+      .btn-primary:is(:hover, :focus) { background-position: bottom right; }
+      
+      .btn-secondary {
+      background-color: var(--white-1);
+      color: var(--eerie-black);
+      }
+      
+      .btn-secondary:is(:hover, :focus) {
+      background-color: var(--eerie-black);
+      color: var(--white-1);
+      }
+      
+      .section { padding-block: var(--section-padding); }
+      
+      .h1,
+      .h2,
+      .h3 {
+      color: var(--eerie-black);
+      font-family: var(--ff-league-spartan);
+      line-height: 1.2;
+      }
+      
+      .h1 { font-size: var(--fs-1); }
+      
+      .h2 { font-size: var(--fs-2); }
+      
+      .h3 { font-size: var(--fs-3); }
+      
+      .w-100 { width: 100%; }
+      
+      .section-title,
+      .section-text { text-align: center; }
+      
+      .section-text { font-size: var(--fs-6); }
+      
+      .grid-list {
+      display: grid;
+      gap: 30px;
+      }
+      
+      .img-holder {
+      aspect-ratio: var(--width) / var(--height);
+      background-color: var(--light-gray);
+      }
+      
+      .img-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      }
+      
+
+     .contact { background-color: var(--white-2); }
+
+.contact .section-text { margin-block: 5px 35px; }
+
+
+.contact-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px 25px;
+}
+
+.contact-item { min-width: 100%; }
+
+.contact-card {
+background-color: var(--white-1);
+padding: 20px;
+border-radius: var(--radius-2);
+box-shadow: var(--shadow-1);
+display: flex;
+align-items: flex-start;
+gap: 15px;
+}
+
+.contact-card .card-icon {
+background-color: var(--cultured-2);
+color: var(--red-crayola);
+font-size: 25px;
+padding: 13px;
+border-radius: 50%;
+transition: var(--transition-1);
+}
+
+.contact-card:is(:hover, :focus) .card-icon {
+background-color: var(--red-crayola);
+color: var(--white-1);
+}
+
+.contact-card .card-title { margin-block-end: 5px; }
+
+.contact-card :is(.card-link, .card-address) {
+font-size: var(--fs-6);
+transition: var(--transition-1);
+}
+
+.contact-card .card-link:is(:hover, :focus) { color: var(--red-crayola); }
+
+
+
+</style>
+ <!-- 
+        - #CTA
+      -->
+
+      <br>
+      <center>
+        <a href="#" class="btn btn-secondary">BACK TO TOP </a>
+      </center><br>
+  {% endblock %}
